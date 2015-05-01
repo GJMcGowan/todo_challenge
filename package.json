@@ -21,7 +21,12 @@
   "homepage": "https://github.com/GJMcGowan/todo_challenge",
   "devDependencies": {
     "jasmine": "^2.3.0",
+    "jasmine-core": "^2.3.0",
     "karma": "^0.12.31",
+    "karma-jasmine": "^0.3.5",
     "karma-phantomjs-launcher": "^0.1.4"
+  },
+  "dependencies": {
+    "express": "^4.12.3"
   }
 }

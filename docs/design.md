@@ -24,3 +24,5 @@ Very optional:
 Need unit and feature tests. Try to unify them, so that we don't have a huge number of testing frameworks.
 
 Use npm and bower sparingly.
+
+Consider making two associative arrays/arrays and having them interact - useful for storing "name" and "complete"
