@@ -1,0 +1,16 @@
+{
+  "name": "todo_challenge",
+  "version": "0.0.0",
+  "homepage": "https://github.com/GJMcGowan/todo_challenge",
+  "authors": [
+    "GJMcGowan <gemcgow@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
