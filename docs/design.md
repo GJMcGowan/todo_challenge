@@ -4,6 +4,8 @@ Try doing it in Angular, but switch to jquery if that's too difficult.
 
 Don't have to use a database fortunately, can use a data structure (arrays/hash objects presumably)
 
+Remember that the front-end is the most important part - the basic backend is relatively simple.
+
 Need to:
   - Store tasks
   - Add tasks
@@ -16,6 +18,9 @@ Optional:
   - See total tasks
   - Delete all completed tasks
 
-Need unit and feature tests.
+Very optional:
+  - logins and databases!
+
+Need unit and feature tests. Try to unify them, so that we don't have a huge number of testing frameworks.
 
 Use npm and bower sparingly.

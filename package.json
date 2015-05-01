@@ -18,5 +18,10 @@
   "bugs": {
     "url": "https://github.com/GJMcGowan/todo_challenge/issues"
   },
-  "homepage": "https://github.com/GJMcGowan/todo_challenge"
+  "homepage": "https://github.com/GJMcGowan/todo_challenge",
+  "devDependencies": {
+    "jasmine": "^2.3.0",
+    "karma": "^0.12.31",
+    "karma-phantomjs-launcher": "^0.1.4"
+  }
 }
