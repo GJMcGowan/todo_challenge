@@ -6,8 +6,7 @@ taskManager.controller('TaskManagerController', [function() {
 
   self.addTask = function() {
     if(self.taskText !== '') {
-      var task = {name: self.taskText}
-      self.taskList.push(task);
+      self.taskList.push({name: self.taskText, hide: false, updateText: ''});
       self.taskText = '';
     };
   };
@@ -16,6 +15,10 @@ taskManager.controller('TaskManagerController', [function() {
     item.hide = true;
   };
 
-  self.updateTask = function() {
+  self.updateTask = function(updateText, item) {
+    if(updateText !== '') {
+      item.name = updateText;
+      item.updateText = '';
+    };
   };
 }]);
