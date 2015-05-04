@@ -42,6 +42,5 @@ describe('List', function() {
       list.create('Feed goldfish');
       expect(list.totalLength()).toEqual(1);
     });
-
   });
 });
