@@ -40,7 +40,8 @@ describe('TaskManagerController', function() {
     });
 
     it('can total the number of tasks', function() {
-      
+      makeTask();
+      expect(ctrl.taskNumber).toEqual(1);
     });
   });
 });

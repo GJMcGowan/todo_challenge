@@ -17,13 +17,17 @@
   <h2>What needs to be done?</h2>
   <input type="text" ng-model="taskCtrl.taskText">
   <button ng-click="taskCtrl.addTask()">Enter</button>
-  <ul ng-repeat="item in taskCtrl.taskList track by $index" ng-hide="item.hide">
-    <li>
-      {{item.name}}
-      <button ng-click="taskCtrl.completeTask(item)">Delete
-      </button>
-      <input type="text" placeholder="Update" ng-model="item.updateText"><button ng-click="taskCtrl.updateTask(item.updateText, item)">Update</button>
-    </li>
-  </ul>
+  <table ng-repeat="item in taskCtrl.taskList track by $index" ng-hide="item.hide">
+    <tr>
+      <td>
+        {{item.name}}
+        <button ng-click="taskCtrl.completeTask(item)">Delete
+        </button>
+        <input type="text" placeholder="Update" ng-model="item.updateText"><button ng-click="taskCtrl.updateTask(item.updateText, item)">Update</button>
+      </td>
+    </tr>
+  </table>
+  <p>Number of Tasks: {{taskCtrl.taskNumber}}
+  </p>
 </body>
 </html>
