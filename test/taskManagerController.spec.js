@@ -27,13 +27,15 @@ describe('TaskManagerController', function() {
     it('can hide a task when complete', function() {
       makeTask();
       ctrl.completeTask();
-      expect(ctrl.taskList[0].hide).toBe(true);
+      task = ctrl.taskList[0]
+      expect(task).toEqual('bah')      
+      // expect(ctrl.taskList[0].hide).toBe(true);
     });
 
-    it('can update a task', function() {
+    xit('can update a task', function() {
       makeTask();
-      ctrl.updateTask();
-      expect(ctrl.taskList)
+      ctrl.updateTask('Feed dog');
+      expect(ctrl.taskList).toEqual(['Feed dog'])
     });
 
     xit('can total the number of tasks')
