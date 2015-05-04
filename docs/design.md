@@ -25,8 +25,4 @@ Need unit and feature tests. Try to unify them, so that we don't have a huge num
 
 Use npm and bower sparingly.
 
-Consider making two associative arrays/arrays and having them interact - useful for storing "name" and "complete"
-
-Remove unused modules (e.g. jade)
-
-Make testing happen outside my main browser.
+Need to be able to switch views between Active and Complete

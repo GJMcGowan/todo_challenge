@@ -7,13 +7,14 @@ taskManager.controller('TaskManagerController', [function() {
 
   self.addTask = function() {
     if(self.taskText !== '') {
-      self.taskList.push({name: self.taskText, hide: false, updateText: ''});
+      self.taskList.push({name: self.taskText, complete: false, updateText: '', hide: false});
       self.taskText = '';
     };
     self.updateNumber();
   };
 
   self.completeTask = function(item) {
+    item.complete = true;
     item.hide = true;
     self.updateNumber();
   };
@@ -28,5 +29,29 @@ taskManager.controller('TaskManagerController', [function() {
 
   self.updateNumber = function() {
     self.taskNumber = self.taskList.length;
+  };
+
+  self.activeTasks = function() {
+    self.taskList.forEach(function(item) {
+      for(i in item) {
+        if(i === 'complete' && item[i] === false) {
+          item.hide = false;
+        } else if(i === 'complete' && item[i] === true) {
+          item.hide = true;
+        };
+      };
+    });
+  };
+
+  self.completeTasks = function() {
+    self.taskList.forEach(function(item) {
+      for(i in item) {
+        if(i === 'complete' && item[i] === true) {
+          item.hide = false;
+        } else if(i === 'complete' && item[i] === false) {
+          item.hide = true;
+        };
+      };
+    });
   };
 }]);
