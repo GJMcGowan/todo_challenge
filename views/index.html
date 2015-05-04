@@ -5,18 +5,30 @@
   <title>Task Manager</title>
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/mainStyling.css">
-  <script src="jquery.js"></script>
-  <script src="js/list.js"></script>
+  <script src="bower_components/jquery/dist/jquery.js"></script>
   <script src="bower_components/angular/angular.js"></script>
   <script src="bower_components/angular-resource/angular-resource.js"></script>
+  <script src="js/list.js"></script>
   <script src="js/app.js"></script>
+  <script src='js/taskManagerController.js'></script>
 </head>
 
-<body>
+<body ng-controller="TaskManagerController as taskCtrl">
   <h2>What needs to be done?</h2>
-  <ul>
-    <li id="first">
+  <input type="text" ng-model="taskCtrl.taskText">
+  <button ng-click="taskCtrl.addTask()">Enter</button>
+  <ul ng-repeat='item in taskCtrl.taskList track by $index'>
+    <li>
+      {{item}}
     </li>
+    <span ng-show="taskCtrl.hide">
+      Complete!
+    </span>
+    <span ng-hide="taskCtrl.hide">
+      Complete?
+      <button ng-click="taskCtrl.completeTask(task)">
+      </button>
+    </span>
   </ul>
 </body>
 </html>
