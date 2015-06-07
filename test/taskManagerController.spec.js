@@ -23,8 +23,6 @@ describe('TaskManagerController', function() {
       expect(ctrl.taskList[0].name).toEqual('Feed cat');
     });
 
-    // How do I test for CSS here? Integration testing somewhere else?
-    // This test is basically useless as it is.
     it('can hide a task when complete', function() {
       makeTask();
       ctrl.completeTask('Feed cat');
